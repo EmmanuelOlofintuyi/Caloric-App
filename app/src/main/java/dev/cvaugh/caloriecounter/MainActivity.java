@@ -13,6 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 import dev.cvaugh.caloriecounter.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+    public static MainActivity instance;
 
     private ActivityMainBinding binding;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        instance = this;
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
